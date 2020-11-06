@@ -1,0 +1,82 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background: #ff9966; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff5e62,
+    #ff9966
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff5e62,
+    #ff9966
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.contenedor {
+  background-color: white;
+  height: calc(100vh - 20px);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 30px 0 30px;
+}
+h1,
+h2 {
+  text-align: center;
+  font-family: "IBM Plex Serif", serif;
+}
+h2 {
+  color: white;
+}
+
+.contenedor-flex {
+  display: flex;
+  border: 3px solid black;
+
+  /* Direcciones */
+  /* flex-direction: row; */
+
+  /* Wrap*/
+  /* flex-wrap: wrap; */
+
+  /* Flex flow - column o row y wrap, nowrap o wrap-reverse */
+  flex-flow: row wrap;
+}
+
+.elemento-flex {
+  padding: 10px;
+  /* flex-grow: 1; */
+
+  /* flex: toma 3 parametros: 1 flex-grow flex-shrink flex-basis*/
+  flex: 1 1 300px;
+}
+
+.elemento-flex:nth-child(1) {
+  padding: 10px;
+  background-color: #e53935;
+}
+
+.elemento-flex:nth-child(2) {
+  background-color: #8e24aa;
+  /* flex-grow: 7; */
+  /* flex-shrink: 0;
+  flex-grow: 0; */
+  /* flex-basis: 50%; */
+}
+
+.elemento-flex:nth-child(3) {
+  background-color: #3f51b5;
+  /* flex: toma 3 parametros: 1 flex-grow flex-shrink flex-basis*/
+}
+
+/* @media screen and (min-width: 768px) {
+  .elemento-flex:nth-child(3) {
+    order: -1;
+    background-color: #3f51b5;
+  }
+
+  .elemento-flex:nth-child(2) {
+    order: 3;
+  }
+} */
